@@ -570,9 +570,9 @@ open class ChartViewBase: NSUIView, ChartDataProvider, AnimatorDelegate
             {
                 // Remove Highlight if it were selecter else add to array
                 if isMultiSelection {
-                    lastHighlighted = nil
                     if let index = _indicesToHighlight.index(of: h!) {
                         _indicesToHighlight.remove(at: index)
+                        lastHighlighted = nil
                     } else {
                         _indicesToHighlight.append(h!)
                         isHighlightAdded = true
